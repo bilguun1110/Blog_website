@@ -32,10 +32,10 @@ export const FirstPage = () => {
             >
               Technology
             </div>
-            <h3 className="text-4xl font-semibold">
+            <h3 className="text-4xl workSansText font-semibold">
               Grid system for better Design User Interface
             </h3>
-            <p className="font-normal text-base text-gray-400">
+            <p className="font-normal text-base workSansText text-gray-400">
               August 20, 2022
             </p>
           </div>

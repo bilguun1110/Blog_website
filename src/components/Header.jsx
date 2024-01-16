@@ -3,6 +3,8 @@ import { IoIosSearch } from "react-icons/io";
 import { MdOutlineMenu, MdClose } from "react-icons/md";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Footer } from "@/components/Footer";
+
 export const Header = ({ children }) => {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
   const routes = ["Home", "Blog", "Contact"];
@@ -10,7 +12,7 @@ export const Header = ({ children }) => {
     setIsMenuClicked((previousState) => !previousState);
   };
   return (
-    <div className="max-w-screen-xl  mx-auto ">
+    <div className="max-w-screen-xl mx-auto  flex flex-col ">
       <div className="flex flex-row justify-around md:justify-between sticky top-0 z-40">
         <Image
           src="/meta.png"
@@ -19,7 +21,7 @@ export const Header = ({ children }) => {
           className="w-[158px] h-[36px]"
         />
         <div className="hidden  md:flex  ">
-          <div className="flex w-[667px] items-center justify-center gap-[40px] font-normal text-base text-gray-600">
+          <div className="workSansText flex w-[667px] items-center justify-center gap-[40px] font-normal text-base text-gray-600">
             {routes.map((route, index) => (
               <p key={index}>{route} </p>
             ))}
@@ -62,6 +64,7 @@ export const Header = ({ children }) => {
         </motion.div>
       )}
       {children}
+      <Footer />
     </div>
   );
 };

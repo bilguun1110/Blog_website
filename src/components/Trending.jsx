@@ -20,8 +20,8 @@ export const Trending = () => {
     },
   ];
   return (
-    <div className="max-w-screen-xl  mt-[100px] ">
-      <div className="text-2xl font-bold">Trending</div>
+    <div className="max-w-screen-xl ml-4  mt-[100px] ">
+      <div className="text-2xl workSansText  font-bold">Trending</div>
       <div className="flex justify-between mt-[30px]  flex-col gap-4 md:flex-row">
         {contens.map(({ imgsrc, text }, index) => (
           <div className="relative " key={index}>
@@ -34,7 +34,7 @@ export const Trending = () => {
             >
               Technology
             </div>
-            <p className="absolute w-[230px] text-white font-semibold ml-[28px] text-lg h-[75px] z-20 bottom-[28px]  ">
+            <p className="absolute w-[230px] workSansText text-white font-semibold ml-[28px] text-lg h-[75px] z-20 bottom-[28px]  ">
               {text}
             </p>
             <Image
