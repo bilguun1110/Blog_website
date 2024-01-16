@@ -1,14 +1,6 @@
-import React from "react";
 import Image from "next/image";
-export const AllBlog = () => {
-  const types = [
-    "All",
-    "Design",
-    "Travel",
-    "Fashion",
-    "Technology",
-    "Branding",
-  ];
+
+export const Blog = () => {
   const cards = [
     {
       imgsrc: "/img1.png",
@@ -69,15 +61,9 @@ export const AllBlog = () => {
     <div className="mt-[100px] max-w-screen-xl">
       <div className="ml-4 text-2xl workSansText  font-bold">All Blog post</div>
       <div className="hidden md:flex justify-between mt-[32px]">
-        <div className="flex gap-5 text-xs workSansText  font-bold">
-          {types.map((type, index) => (
-            <div className="" key={index}>
-              {type}
-            </div>
-          ))}
-        </div>
+        <div className="flex gap-5 text-xs workSansText  font-bold"></div>
 
-        <div className="text-xs workSansText  font-bold">View all</div>
+        <div className="text-xs workSansText  font-bold"></div>
       </div>
       <div className="ml-4 mt-[32px] grid grid-cols-1 md:grid-cols-3 gap-4 ">
         {cards.map(({ imgsrc, major, text, date }, index) => (

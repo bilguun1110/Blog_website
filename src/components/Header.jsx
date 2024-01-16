@@ -12,8 +12,8 @@ export const Header = ({ children }) => {
     setIsMenuClicked((previousState) => !previousState);
   };
   return (
-    <div className="max-w-screen-xl mx-auto  flex flex-col ">
-      <div className="flex flex-row justify-around md:justify-between sticky top-0 z-40">
+    <div className=" ">
+      <div className="flex  flex-row justify-around sticky top-0 z-40">
         <Image
           src="/meta.png"
           width={158}
@@ -21,7 +21,7 @@ export const Header = ({ children }) => {
           className="w-[158px] h-[36px]"
         />
         <div className="hidden  md:flex  ">
-          <div className="workSansText flex w-[667px] items-center justify-center gap-[40px] font-normal text-base text-gray-600">
+          <div className="workSansText flex w-[500px]  gap-[40px] font-normal text-base text-gray-600">
             {routes.map((route, index) => (
               <p key={index}>{route} </p>
             ))}
