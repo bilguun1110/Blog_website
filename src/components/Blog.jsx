@@ -58,7 +58,7 @@ export const Blog = () => {
     },
   ];
   return (
-    <div className="mt-[100px] max-w-screen-xl">
+    <div className="mt-[100px] max-w-screen-xl mx-auto">
       <div className="ml-4 text-2xl workSansText  font-bold">All Blog post</div>
       <div className="hidden md:flex justify-between mt-[32px]">
         <div className="flex gap-5 text-xs workSansText  font-bold"></div>

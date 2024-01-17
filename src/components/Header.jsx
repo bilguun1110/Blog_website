@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { IoIosSearch } from "react-icons/io";
+import Link from "next/link";
 import { MdOutlineMenu, MdClose } from "react-icons/md";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -7,7 +8,7 @@ import { Footer } from "@/components/Footer";
 
 export const Header = ({ children }) => {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
-  const routes = ["Home", "Blog", "Contact"];
+  const routes = ["/", "blog", "contact"];
   const handleMenuClick = () => {
     setIsMenuClicked((previousState) => !previousState);
   };
@@ -23,7 +24,9 @@ export const Header = ({ children }) => {
         <div className="hidden  md:flex  ">
           <div className="workSansText flex w-[500px]  gap-[40px] font-normal text-base text-gray-600">
             {routes.map((route, index) => (
-              <p key={index}>{route} </p>
+              <Link href={`/${route}`} key={index}>
+                <p className="capitalize">{route === "/" ? "Home" : route} </p>
+              </Link>
             ))}
           </div>
           <div className="flex w-[166px] h-[36px] bg-gray-200 pl-[16px] py-[8px] pr-2 rounded-[5px]">

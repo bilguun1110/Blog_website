@@ -4,7 +4,7 @@ import { FirstPage } from "@/components/FirstPage";
 
 import { Trending } from "@/components/Trending";
 import { AllBlog } from "@/components/AllBlog";
-import { Information } from "@/components/Information";
+import { NotFound } from "@/components/NotFound";
 export default function Home() {
   return (
     <div>

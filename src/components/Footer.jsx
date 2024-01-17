@@ -3,8 +3,8 @@ import Image from "next/image";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 export const Footer = () => {
   return (
-    <div className="md:w-[100%] h-[495px] pt-[64px] bg-gray-50 md:px-[300px] md:py-[64px] ">
-      <div className="md:w-[1215px] md:h-[236px] flex flex-col items-center md:items-start  md:flex-row gap-8 ">
+    <div className="md:w-[100%] h-[495px] pt-[64px] bg-gray-50 md:px-[374px]  md:py-[64px] ">
+      <div className="md:w-[1215px] md:h-[236px] flex flex-col items-center md:items-start justify-between md:flex-row gap-8 ">
         <div className="hidden md:block md:w-[280px] workSansText  ">
           <div className="font-semibold text-lg">About</div>
           <div className="font-normal text-base mt-[12px] text-gray-500">
@@ -50,9 +50,11 @@ export const Footer = () => {
             <p className="text-base font-normal">© All Rights Reserved.</p>
           </div>
         </div>
-        <div className="hidden md:flex gap-4 text-base font-normal text-gray-600 divide-x-2">
+        <div className="hidden md:flex gap-4 text-base font-normal text-gray-600">
           <p className="divide-x-2">Terms of Use</p>
+
           <p>Privacy Policy</p>
+
           <p>Cookie Policy</p>
         </div>
       </div>
