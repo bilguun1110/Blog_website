@@ -12,31 +12,12 @@ export const Trending = () => {
       .get(url)
       .then((res) => {
         setData(res.data);
-        console.log(data);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
   }, []);
 
-  const contens = [
-    {
-      imgsrc: "/Rectangle 39.png",
-      text: "The Impact of Technology on the Workplace: How Technology is Changing",
-    },
-    {
-      imgsrc: "/Rectangle 39.png",
-      text: "The Impact of Technology on the Workplace: How Technology is Changing",
-    },
-    {
-      imgsrc: "/Rectangle 40.png",
-      text: "The Impact of Technology on the Workplace: How Technology is Changing",
-    },
-    {
-      imgsrc: "/Rectangle 41.png",
-      text: "The Impact of Technology on the Workplace: How Technology is Changing",
-    },
-  ];
   return (
     <div className="max-w-screen-xl ml-4  mt-[100px] overflow-x-scroll ">
       <div className="text-2xl workSansText  font-bold">Trending</div>
@@ -51,7 +32,7 @@ export const Trending = () => {
                 }}
                 className="px-2.5 py-1 w-[97px] rounded-[6px] ml-[28px] font-medium text-sm bottom-[120px]"
               >
-                Technology
+                {el.tag_list[0]}
               </div>
               <p className="w-[230px] workSansText text-white font-semibold ml-[28px] text-lg h-[75px] z-20 bottom-[28px]  ">
                 {el.title}

@@ -50,11 +50,13 @@ export const Header = ({ children }) => {
             type: "",
             duration: 0.4,
           }}
-          className="flex flex-col mt-[30px] mx-auto ml-[40px]  "
+          className="flex flex-col mt-[30px] mx-auto ml-[40px] sticky top-0 z-40  "
         >
           <div className="flex flex-col w-[100px] items-start   gap-[20px] font-normal text-base text-gray-600">
             {routes.map((route, index) => (
-              <p key={index}>{route} </p>
+              <Link href={`/${route}`} key={index}>
+                <p className="capitalize">{route === "/" ? "Home" : route} </p>
+              </Link>
             ))}
           </div>
           <div className="flex w-[166px] h-[36px]  mt-[20px] bg-gray-200 pl-[16px] py-[8px] pr-2 rounded-[5px]">
