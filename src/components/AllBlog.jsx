@@ -96,6 +96,8 @@ export const AllBlog = (props) => {
 
       <button
         onClick={clickHandler}
+        onMouseOver={MouseOver}
+        onMouseOut={MouseOut}
         className="hidden md:block md:w-[123px] h-[48px] border-[1px] border-solid  rounded-[6px] mt-[100px] ml-[600px] text-base font-semibold text-gray-500 workSansText mb-[100px]"
       >
         Load More

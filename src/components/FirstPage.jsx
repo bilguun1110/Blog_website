@@ -27,14 +27,14 @@ export const FirstPage = () => {
       });
   }, []);
   return (
-    <div>
+    <div className="overflow-hidden">
       <div
-        className="hidden md:flex flex-col relative mt-[110px] h-[600px]  w-[1280px] duration-700 overflow-hidden  "
-        style={{ marginLeft: current === 0 ? "0px" : `-${current * 1216}px` }}
+        className="hidden md:flex flex-col relative mt-[110px] h-[600px]  w-[1280px] duration-700  "
+        style={{ marginLeft: current === 0 ? "0px" : `-${current * 1280}px` }}
       >
         <div className="flex h-full w-full z-30">
           {data.map((el, index) => (
-            <div key={index} className="shrink-0 overflow-hidden bg-red-300  ">
+            <div key={index} className="shrink-0 overflow-hidden   ">
               <Image
                 src={el.cover_image ?? "/firstPage.png"}
                 width={1280}
@@ -51,10 +51,10 @@ export const FirstPage = () => {
                     }}
                     className="px-2.5 py-1 w-[97px] rounded-[6px] font-medium text-sm"
                   >
-                    Technology
+                    {el.tag_list[0]}
                   </div>
                   <h3 className="text-4xl workSansText font-semibold">
-                    Grid system for better Design User Interface
+                    {el.title}
                   </h3>
                   <p className="font-normal text-base workSansText text-gray-400">
                     August 20, 2022
